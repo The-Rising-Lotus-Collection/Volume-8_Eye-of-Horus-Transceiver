@@ -23,7 +23,9 @@ The Eye of Horus Transceiver strictly enforces the solid-state engineering princ
 
 The device is split into two primary components: the **Inverted Honeycomb Transceiver Bowl** and the **Modular Universal Resonator Puck**.
 
-[UNIVERSAL RESONATOR PUCK] (Flat Disc)│▼ (Snaps Flush down onto Flat Top)┌───────────────────┐│  FLAT-TOP COLUMN  │ <-- Heavy-Duty Shear Barrier & Index Node│   (Quartz-Epoxy)  │─────────────────┴─────────┬─────────┴─────────────────  <-- Upper Concave Surface (CCW Inward)│[UPPER HONEYCOMB] ─────┼─────> Upper Field Shaper│💥 [TOROIDAL COIL] ──┴── 💥 CENTERED COIL EQUATOR (Deep in Shield Centerline)│[LOWER HONEYCOMB] ─────┼─────> Ground Plane / Reflector│───────────────────────────┴───────────────────────────  <-- Lower Convex Surface (CW Outward
+## 🔬 2. PHYSICAL ARCHITECTURE & GEOMETRY
+
+The device splits into the **Inverted Honeycomb Transceiver Bowl** and the **Modular Universal Resonator Puck**. For the full structural ASCII diagram and layout details, please refer to the repository documentation.
 
 ### 2.1 The Flat-Topped Cylinder Pupil Node
 *   The center "Pupil" consists of a vertical, flat-topped cylindrical column cast directly into the main substrate body. 
