@@ -1,0 +1,10 @@
+CERN Open Hardware Licence Version 2 - Strongly Reciprocal
+
+Preamble
+CERN has developed this licence to promote collaboration among hardware designers and to provide a legal tool which supports the freedom to use, study, modify, share and distribute hardware designs and products based on those designs.
+
+This project and all associated source schematics, layout topographies, material specifications, and physical interfaces for the Volume-8 Eye-of-Horus Modular Transceiver System are licensed under the CERN-OHL-S v2.0 framework.
+
+Anyone is welcome to use this design in accordance with the license conditions. Distribution of this hardware or any derivative works incorporating this architecture requires full disclosure of the underlying design files under the same strongly reciprocal conditions (CERN-OHL-S-2.0).
+
+Copyright 2026 The-Rising-Lotus-Collection. All Rights Reserved.
