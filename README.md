@@ -21,10 +21,6 @@ The Eye of Horus Transceiver strictly enforces the solid-state engineering princ
 
 ## 🔬 2. PHYSICAL ARCHITECTURE & GEOMETRY
 
-The device is split into two primary components: the **Inverted Honeycomb Transceiver Bowl** and the **Modular Universal Resonator Puck**.
-
-## 🔬 2. PHYSICAL ARCHITECTURE & GEOMETRY
-
 The device splits into the **Inverted Honeycomb Transceiver Bowl** and the **Modular Universal Resonator Puck**. For the full structural ASCII diagram and layout details, please refer to the repository documentation.
 
 ### 2.1 The Flat-Topped Cylinder Pupil Node
