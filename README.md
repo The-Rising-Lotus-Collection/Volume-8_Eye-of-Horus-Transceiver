@@ -17,7 +17,7 @@
 The Eye of Horus Transceiver strictly enforces the solid-state engineering principles of the Rising Lotus Collection:
 
 ### 1.1 The Rule of Ultimate Simplicity (Wire Minimums)
-Zero wiring harnesses. Communication and power exchange between the central transceiver bowl, the modular pucks, and the core network occur entirely via wireless resonant field coupling. Permanent 3-6-9 magnetic arrays act as mechanical tethers, not data lines.
+Zero wiring harnesses. Communication and power exchange between the central transceiver bowl, the modular pucks, and the core network occur entirely via **wireless resonant field coupling**. Permanent 3-6-9 magnetic arrays act as mechanical tethers, not data lines.
 
 ### 1.2 The Rule of Congruent Depth
 The composite transceiver shield maintains a continuous **1.0-inch cross-sectional thickness**. The internal toroidal induction coil and dual 3-6-9 graded honeycombs are encased precisely on the midpoint horizon to ensure flawless field containment.
@@ -26,19 +26,18 @@ The composite transceiver shield maintains a continuous **1.0-inch cross-section
 Cast inside high-strength structural epoxies engineered for a strict **1.5% volumetric curing shrinkage contraction**. Locked within its mold under a continuous **15 MPa mechanical compression force**, the dry alpha-quartz powders generate a permanent, self-charging piezoelectric dipole voltage. This serves as the quiescent baseline power supply.
 
 ### 1.4 The Rule of the 3-6-9 Triad Matrix
-All geometry scales to Tesla's constraints:
 - Vein paths are swept at a strict **18° swirl angle** (1+8=9)
 - Universal puck connector interface utilizes **six pins spaced exactly 60° apart** (6 × 60° = 360°)
 - Field lens utilizes a fractional **9mm → 6mm → 3mm** graded matrix
 
 ---
 
-## 🛠️ 2. PHYSICAL ARCHITECTURE & GEOMETRY
+## 🔬 2. PHYSICAL ARCHITECTURE & GEOMETRY
 
 ### 2.1 The Flat-Topped Cylinder Pupil Node
-- Center "Pupil" consists of a vertical, flat-topped cylindrical column node cast directly into the main substrate, replacing older rounded dome layouts.
-- Provides a **100% flush, solid-to-solid contact plane** for the Universal Puck interface, completely eliminating wedge-shaped air gaps and preventing dielectric wave scattering.
-- The vertical column walls act as a **structural shear key**, completely absorbing lateral torque during Dynamic Spinning Mode to protect the 6-pin index alignment.
+- Center "Pupil" consists of a vertical, flat-topped cylindrical column node cast directly into the main substrate, replacing older rounded dome layouts
+- Provides a **100% flush, solid-to-solid contact plane** for the Universal Puck interface, completely eliminating wedge-shaped air gaps and preventing dielectric wave scattering
+- The vertical column walls act as a **structural shear key**, completely absorbing lateral torque during Dynamic Spinning Mode to protect the 6-pin index alignment
 
 ### 2.2 Dual-Sided Counter-Rotating Vector Veins
 
@@ -65,9 +64,23 @@ Instead of using a single uniform mesh, the copper honeycomb discs are structura
 
 **The Physics:** This logarithmic density gradient acts as an **electromagnetic lens**. It naturally accelerates and focuses incoming vectors from a wide spread down into a tight focal point at the center equator, eliminating wave reflections and back-pressure.
 
-**Fabrication Note:** The honeycomb is a **single continuous chemically etched or water-jet cut copper sheet** with variable cell apertures. It is **not** separate rings—eliminating seam lines that could delaminate under 15 MPa pre-stress.
+**Fabrication Note:** The honeycomb is a **single continuous chemically etched or water-jet cut copper sheet** with variable cell apertures. It is not separate rings—eliminating seam lines that could delaminate under 15 MPa pre-stress.
 
-### 3.2 Symmetrical Equator Containment
+### 3.2 3-6-9 System Configuration
+
+| Parameter | Value | Harmonic Meaning |
+|-----------|-------|------------------|
+| **Outer Aperture** | 9mm | Completion number—full field capture |
+| **Mid Aperture** | 6mm | Phase quadrants—compression zone |
+| **Inner Aperture** | 3mm | Spatial components—focal point |
+| **Vein Angle** | 18° | 1+8=9 |
+| **Pin Count** | 6 | 6 × 60° = 360° |
+| **Puck Sizes** | 3, 6, 9, 12-inch | 3-6-9-12 progression |
+| **Clock Base** | 70.47 Hz | 9 × 7.83 Hz |
+| **Pre-Stress** | 15 MPa | 15 = 3 × 5 |
+| **Shrinkage** | 1.5% | 1.5% volumetric curing |
+
+### 3.3 Symmetrical Equator Containment
 
 | Disc | Location | Function |
 |------|----------|----------|
@@ -122,26 +135,38 @@ A plug-and-play architecture standard shared identically across the entire fleet
 
 ---
 
-## 🔬 6. LABORATORY TESTING & MANUFACTURING LAWS
+## 📡 6. SYSTEM API REGISTER MAPPING (`EYE_` / `eye_`)
 
-### 6.1 The Levitation Mandate
-To completely isolate systems from acoustic table shunting and electromagnetic impedance grounding, active modules **cannot touch the workbench** or be hung by metallic wires. The entire array must float cleanly inside a localized diamagnetic repulsion field cushion over **thick, multi-layered Carbon Nanotube mats**.
-
-### 6.2 Vitrimer-B-Stage Semi-Cure Process
-To prevent boundary delamination joints under high-frequency Burst Mode stress:
-
-| Step | Action |
-|------|--------|
-| **1** | Cast and cure the primary transceiver bowl substrate to a 70% soft "B-stage" state |
-| **2** | Index the centered equator coil, the 3-6-9 graded honeycomb field lenses, and alignment pins onto the horizontal midpoint |
-| **3** | Execute the final epoxy pour for the vertical Pupil cylinder node |
-| **4** | Compress the unified mold to **15 MPa** and perform the final thermal bake—allowing polymer chains to cross-link completely across the boundary line into a single, unbroken molecular hull |
+| Variable | Data Type | Function |
+|----------|-----------|----------|
+| `eye_topload_phase[6]` | volatile uint16_t | 6 CW vein phase offsets (convex face) |
+| `eye_bottomload_phase[6]` | volatile uint16_t | 6 CCW vein phase offsets (concave face) |
+| `eye_equator_freq` | uint32_t | Centered toroidal coil carrier frequency (Hz) |
+| `eye_puck_status` | uint8_t | 0 = No Puck, 1 = 3-inch, 2 = 6-inch, 3 = 9-inch, 4 = 12-inch |
+| `eye_coherence` | float32 | Field coherence percentage (0.0 to 1.0) |
+| `eye_reset_mode` | uint8_t | 0 = Normal, 1 = Auto-Reset Active, 2 = Manual Override |
+| `eye_power_loop_status` | bool | Self-sustaining power loop active/inactive |
 
 ---
 
-## 📜 7. OPEN SOURCE RECIPROCITY LICENSING
+## 🔗 7. INTEGRATION WITH THE FLEET
 
-This project is officially licensed under the **CERN Open Hardware Licence Version 2 – Strongly Reciprocal (CERN-OHL-S-2.0)**. Any derivative transceiver arrays, graded honeycomb lenses, or universal puck interfaces utilizing this blueprint are legally bound to release their complete design documentation under the exact same open-source terms.
+| System | Integration Point |
+|--------|-------------------|
+| **The Root (V7)** | Calculates phase-locking for CW/CCW vein synchronization |
+| **The Pulse System (V6)** | Routes scalar communication data via the Universal Puck |
+| **Tesla Tower (V4)** | Provides global Zenneck surface wave relay |
+| **Kitty Hawk (V2)** | Hull-integrated transceiver windows use the same grading |
+| **CAPSTONE (V3)** | Molecular processing commands routed through the puck interface |
+| **HIVE Battery (V5)** | Provides baseline power via 15 MPa piezoelectric pre-stress |
+| **Ankh Core (V9)** | Verifies transceiver field integrity with deep-voxel scanning |
+| **Bifröst (V10)** | Coordinate shift calculations use the Eye's phase-lock data |
+
+---
+
+## 📜 8. OPEN SOURCE RECIPROCITY LICENSING
+
+Licensed under the **CERN Open Hardware Licence Version 2 – Strongly Reciprocal (CERN-OHL-S-2.0)** . Any derivative transceiver arrays, graded honeycomb lenses, or universal puck interfaces utilizing this blueprint are legally bound to release their complete design documentation under the exact same open-source terms.
 
 ---
 
@@ -156,5 +181,8 @@ This project is officially licensed under the **CERN Open Hardware Licence Versi
 | **Vein Angle** | 18° CW (convex) / 18° CCW (concave)—continuous U-turn rim |
 | **Pupil Interface** | Flat-topped cylindrical column—solid-to-solid puck contact |
 | **Magnetic Glands** | Sub-surface, ⅛-inch epoxy cover—60° spacing |
-| **Field Effect** | Zero-friction, self-sustaining ambient power loop |r chains to cross-link completely across the boundary line into a single, unbroken molecular hull.
-
+| **Field Effect** | Zero-friction, self-sustaining ambient power loop |
+| **Puck Sizes** | 3, 6, 9, 12-inch interchangeable |
+| **Pre-Stress** | 15 MPa via 1.5% volumetric curing shrinkage |
+| **Base Clock** | 70.47 Hz (9 × 7.83 Hz) |
+| **License** | CERN-OHL-S-2.0 |
